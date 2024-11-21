@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="0.1">
+        <title>Kill the Reload</title>
+    </head>
+    <style>
+    body{
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        /* transition: ease-in-out;
+        animation: blink 1s infinite;
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        animation-name: blink; */
+    }
+    span{
+        font-size: 100px;
+        font-family: monospace;
+        transition: ease-in-out;
+        animation: blink 1s infinite;
+    }
+    @keyframes blink{
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+</style>
+    <body>
+        <span id="time"></span>
+    </body>
+    <script>
+const time = document.getElementById('time');
+const date = new Date();
+time.innerHTML = date.toLocaleTimeString();
+</script>
+</html>
